@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [book-flight-module]" parallel="tests">
+  <test thread-count="5" name="book-flight-3(failed)" parallel="tests">
+    <parameter name="expectedPrice" value="$1169 USD"/>
+    <parameter name="noOfPassengers" value="3"/>
+    <classes>
+      <class name="com.newtours.tests.BookFlightTest">
+        <methods>
+          <include name="quitBrowser"/>
+          <include name="setupParameters"/>
+          <include name="registrationPage"/>
+          <include name="flightConfirmationPage"/>
+          <include name="setupDriver"/>
+          <include name="registrationConfirmationPage"/>
+          <include name="flightDetailsPage"/>
+          <include name="findFlightPage"/>
+        </methods>
+      </class> <!-- com.newtours.tests.BookFlightTest -->
+    </classes>
+  </test> <!-- book-flight-3(failed) -->
+  <test thread-count="5" name="book-flight-4(failed)" parallel="tests">
+    <parameter name="expectedPrice" value="$1169 USD"/>
+    <parameter name="noOfPassengers" value="4"/>
+    <classes>
+      <class name="com.newtours.tests.BookFlightTest">
+        <methods>
+          <include name="quitBrowser"/>
+          <include name="setupParameters"/>
+          <include name="registrationPage"/>
+          <include name="flightConfirmationPage"/>
+          <include name="setupDriver"/>
+          <include name="registrationConfirmationPage"/>
+          <include name="flightDetailsPage"/>
+          <include name="findFlightPage"/>
+        </methods>
+      </class> <!-- com.newtours.tests.BookFlightTest -->
+    </classes>
+  </test> <!-- book-flight-4(failed) -->
+  <test thread-count="5" name="book-flight-1(failed)" parallel="tests">
+    <parameter name="expectedPrice" value="$1169 USD"/>
+    <parameter name="noOfPassengers" value="1"/>
+    <classes>
+      <class name="com.newtours.tests.BookFlightTest">
+        <methods>
+          <include name="quitBrowser"/>
+          <include name="setupParameters"/>
+          <include name="registrationPage"/>
+          <include name="flightConfirmationPage"/>
+          <include name="setupDriver"/>
+          <include name="registrationConfirmationPage"/>
+          <include name="flightDetailsPage"/>
+          <include name="findFlightPage"/>
+        </methods>
+      </class> <!-- com.newtours.tests.BookFlightTest -->
+    </classes>
+  </test> <!-- book-flight-1(failed) -->
+  <test thread-count="5" name="book-flight-2(failed)" parallel="tests">
+    <parameter name="expectedPrice" value="$1169 USD"/>
+    <parameter name="noOfPassengers" value="2"/>
+    <classes>
+      <class name="com.newtours.tests.BookFlightTest">
+        <methods>
+          <include name="quitBrowser"/>
+          <include name="setupParameters"/>
+          <include name="registrationPage"/>
+          <include name="flightConfirmationPage"/>
+          <include name="setupDriver"/>
+          <include name="registrationConfirmationPage"/>
+          <include name="flightDetailsPage"/>
+          <include name="findFlightPage"/>
+        </methods>
+      </class> <!-- com.newtours.tests.BookFlightTest -->
+    </classes>
+  </test> <!-- book-flight-2(failed) -->
+</suite> <!-- Failed suite [book-flight-module] -->
