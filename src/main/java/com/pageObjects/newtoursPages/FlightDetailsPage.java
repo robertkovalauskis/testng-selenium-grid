@@ -1,29 +1,22 @@
-package com.newtours.pages;
+package com.pageObjects.newtoursPages;
 
+import com.pageObjects.core.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class FlightDetailsPage {
-
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class FlightDetailsPage extends PageBase {
+    public FlightDetailsPage(WebDriver driver) {
+        super(driver);
+    }
 
     @FindBy(name = "passCount")
     private WebElement passengers;
 
     @FindBy(name = "findFlights")
     private WebElement submitBtn;
-
-    public FlightDetailsPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, 30);
-        PageFactory.initElements(driver, this);
-    }
 
     public void selectPassengers(String nrOfPassengers) {
         this.wait.until(ExpectedConditions.elementToBeClickable(passengers));
@@ -34,5 +27,4 @@ public class FlightDetailsPage {
     public void goToFindFlightsPage() {
         this.submitBtn.click();
     }
-
 }

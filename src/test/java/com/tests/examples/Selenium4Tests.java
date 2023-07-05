@@ -1,18 +1,14 @@
-package com.tests;
+package com.tests.examples;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
-
+import com.tests.core.TestBase;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -23,22 +19,7 @@ import java.util.logging.Level;
 
 import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
-public class Selenium4Tests {
-
-    public static WebDriver driver;
-
-    @BeforeSuite
-    public static void setupDriver() {
-//        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("http://www.amazon.com");
-    }
-
-    @AfterSuite
-    public static void closeDriver() {
-        // driver.quit();
-    }
+public class Selenium4Tests extends TestBase {
 
     @Test
     public void captureElement() throws IOException {

@@ -4,28 +4,28 @@
         <parameter name="noOfPassengers" value="1" />
         <parameter name="expectedPrice" value="$1169 USD" />
         <classes>
-            <class name="com.newtours.tests.BookFlightTest" />
+            <class name="com.tests.newtoursTests.BookFlightTests" />
         </classes>
     </test>
     <test name="book-flight-2">
         <parameter name="noOfPassengers" value="2" />
         <parameter name="expectedPrice" value="$1169 USD" />
         <classes>
-            <class name="com.newtours.tests.BookFlightTest" />
+            <class name="com.tests.newtoursTests.BookFlightTests" />
         </classes>
     </test>
     <test name="book-flight-3">
         <parameter name="noOfPassengers" value="3" />
         <parameter name="expectedPrice" value="$1169 USD" />
         <classes>
-            <class name="com.newtours.tests.BookFlightTest" />
+            <class name="com.tests.newtoursTests.BookFlightTests" />
         </classes>
     </test>
     <test name="book-flight-4">
         <parameter name="noOfPassengers" value="4" />
         <parameter name="expectedPrice" value="$1169 USD" />
         <classes>
-            <class name="com.newtours.tests.BookFlightTest" />
+            <class name="com.tests.newtoursTests.BookFlightTests" />
         </classes>
     </test>
 </suite>

@@ -1,18 +1,17 @@
-package com.newtours.pages;
+package com.pageObjects.newtoursPages;
 
+import com.pageObjects.core.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class FlightConfirmationPage {
-
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class FlightConfirmationPage extends PageBase {
+    public FlightConfirmationPage(WebDriver driver) {
+        super(driver);
+    }
 
     @FindBy(xpath = "//font[contains(text(), 'Confirmation')]")
     private WebElement flightConfirmationHeader;
@@ -23,12 +22,6 @@ public class FlightConfirmationPage {
     @FindBy(linkText = "SIGN-OFF")
     private WebElement signOffLink;
 
-    public FlightConfirmationPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, 30);
-        PageFactory.initElements(driver, this);
-    }
-
     public String getPrice() {
         this.wait.until(ExpectedConditions.visibilityOf(this.flightConfirmationHeader));
         System.out.println(this.flightConfirmationHeader.getText());
@@ -37,5 +30,4 @@ public class FlightConfirmationPage {
         this.signOffLink.click();
         return price;
     }
-
 }

@@ -1,14 +1,14 @@
-package com.newtours.tests;
+package com.tests.newtoursTests;
 
-import com.newtours.pages.*;
-import com.tests.BaseTest;
+import com.pageObjects.newtoursPages.*;
+import com.tests.core.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class BookFlightTest extends BaseTest {
+public class BookFlightTests extends TestBase {
     private String nrOfPassengers;
     private String expectedPrice;
 

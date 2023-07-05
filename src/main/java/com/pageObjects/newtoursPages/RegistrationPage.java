@@ -1,15 +1,15 @@
-package com.newtours.pages;
+package com.pageObjects.newtoursPages;
 
+import com.pageObjects.core.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class RegistrationPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class RegistrationPage extends PageBase {
+    public RegistrationPage(WebDriver driver) {
+        super(driver);
+    }
 
     @FindBy(name = "firstName")
     private WebElement firstNameTxt;
@@ -28,12 +28,6 @@ public class RegistrationPage {
 
     @FindBy(name = "register")
     private WebElement submitBtn;
-
-    public RegistrationPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, 30);
-        PageFactory.initElements(driver, this);
-    }
 
     public void goTo() {
         this.driver.get("https://vins-udemy.s3.amazonaws.com/docker/docker-book-flight.html");
@@ -54,6 +48,4 @@ public class RegistrationPage {
     public void submit() {
         this.submitBtn.click();
     }
-
-
 }
