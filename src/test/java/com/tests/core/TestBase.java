@@ -1,5 +1,6 @@
 package com.tests.core;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,10 +18,10 @@ public class TestBase {
     protected WebDriver driver;
 
     @BeforeTest
-    public void setupDriver() {
+    public void setupDriver() throws MalformedURLException {
         /* Choose WebDriver initialization method */
-        // setupDriverToRunTestsOnSeleniumGrid();
-        setupDriverToRunTestsLocally();
+        setupDriverToRunTestsOnSeleniumGrid();
+//      setupDriverToRunTestsLocally();
     }
 
     @AfterTest
@@ -29,6 +30,7 @@ public class TestBase {
     }
 
     public void setupDriverToRunTestsLocally() {
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
