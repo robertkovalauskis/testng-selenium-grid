@@ -19,7 +19,7 @@ pipeline {
 			    withCredentials([usernamePassword(credentialsId: 'docker_hub', passwordVariable: 'pass', usernameVariable: 'user')]) {
                     //sh
 			        bat "docker login --username=${user} --password=${pass}"
-			        bat "docker push kovalauskis/selenium-docker:latest"
+			        bat "docker push kovalauskis/testng-selenium-grid:latest"
 			    }                           
             }
         }
