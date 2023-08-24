@@ -2,6 +2,9 @@ package com.tests.newtoursTests;
 
 import com.pageObjects.newtoursPages.*;
 import com.tests.core.TestBase;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
@@ -20,6 +23,8 @@ public class BookFlightTests extends TestBase {
     }
 
     @Test
+    @Feature("Registration")
+    @Severity(SeverityLevel.NORMAL)
     public void registrationPage() {
         RegistrationPage registrationPage = new RegistrationPage(driver);
         registrationPage.goTo();
