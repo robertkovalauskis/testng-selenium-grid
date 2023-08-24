@@ -11,7 +11,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t=kovalauskis/selenium-docker ."
+                bat "docker build -t=kovalauskis/testng-selenium-grid ."
             }
         }
         stage('Push Image') {
