@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.udemy.selenium.docker</groupId>
-    <artifactId>SeleniumDockerTutorial</artifactId>
+    <groupId>com.kovalauskis.testng.selenium</groupId>
+    <artifactId>TestNGseleniumGrid</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Archetype - SeleniumDockerTutorial</name>
+    <name>Archetype - TestNG Selenium project</name>
     <url>http://maven.apache.org</url>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -41,12 +41,12 @@
     </dependencies>
 
     <build>
-        <finalName>selenium-docker</finalName>
+        <finalName>testng-selenium-tests</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <compilerVersion>1.8</compilerVersion> <!--environment Java version -->
                     <source>1.8</source>
@@ -84,6 +84,14 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId> <!-- allows to trigger tests with mvn clean test commands -->
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <suiteXmlFiles>book-flight-module.xml</suiteXmlFiles> <!-- test suite that will be executed -->
+                </configuration>
             </plugin>
         </plugins>
     </build>
