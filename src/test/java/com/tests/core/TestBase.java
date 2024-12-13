@@ -20,8 +20,8 @@ public class TestBase {
     @BeforeTest
     public void setupDriver() throws MalformedURLException {
         /* Choose WebDriver initialization method */
-        setupDriverToRunTestsOnSeleniumGrid();
-//      setupDriverToRunTestsLocally();
+        // setupDriverToRunTestsOnSeleniumGrid();
+        setupDriverToRunTestsLocally();
     }
 
     @AfterTest
